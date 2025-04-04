@@ -222,8 +222,8 @@ main > section {
   }
 }
 
-@import "./components/navbar.scss";
-@import "./components/footer.scss";
+@import "./components/navbar.css";
+@import "./components/footer.css";
 
 
 
