@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavbarDropdown();
 });
 
-import './components/navbar.scss';
+import './components/navbar.css';
 
