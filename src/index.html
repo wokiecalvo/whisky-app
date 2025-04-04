@@ -3,11 +3,71 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.scss">
+    <script type="module" src="app.js"></script>
   </head>
   <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
+    <header>
+      <include src="./components/navbar.html"></include>
+    </header>
+    
+    <main>
+          <!-- Explore Our Finest -->
+      <section class="banner-link" id="finest">
+        <div class="overlay">
+          <div class="overlay-text">Explore our Finest</div>
+        </div>
+      </section>
+
+          <!-- Categories Grid -->
+      <section class="categories-grid">
+        <div class="category-card" onclick="window.location.href='category.html'">
+          <div class="overlay">
+            <div class="overlay-text">Islay</div>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="overlay">
+            <div class="overlay-text">Lowlands</div>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="overlay">
+            <div class="overlay-text">Speyside</div>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="overlay">
+            <div class="overlay-text">Highlands</div>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="overlay">
+            <div class="overlay-text">Campbeltown</div>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="overlay">
+            <div class="overlay-text">World Whiskies</div>
+          </div>
+        </div>
+      </section>
+
+          <!-- Our Expertise -->
+      <section class="banner-link" id="expertise">
+        <div class="overlay">
+          <div class="overlay-text">Our Expertise</div>
+        </div>
+      </section>
+      <section class="banner-link" id="join">
+        <div class="overlay">
+          <div class="overlay-text">Join us now</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <include src="./components/footer.html"></include>
+    </footer>
   </body>
 </html>

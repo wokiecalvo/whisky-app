@@ -1,0 +1,230 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui;
+  color-scheme: light dark;
+  display: block;
+}
+
+.banner-link {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  transition: filter 0.3s;
+  cursor: pointer;
+  margin: 0; 
+  padding: 0;
+
+  &.overlay-text {
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1;
+  }
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+
+  &#finest {
+    background-image: url('./images/finest.jpg');
+  }
+
+  &#expertise {
+    background-image: url('./images/expertise.jpg');
+  }
+
+  &#join {
+    background-image: url('./images/join.jpg');
+  }
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 2rem 0;
+  padding: 0 1rem;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2rem;
+  }
+
+
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .overlay-text {
+      color: white;
+      font-size: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+      padding: 0.5rem 1rem;
+    }
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+
+    &:nth-child(1) { background-image: url('./images/islay.jpg'); }
+    &:nth-child(2) { background-image: url('./images/lowlands.jpg'); }
+    &:nth-child(3) { background-image: url('./images/speyside.jpg'); }
+    &:nth-child(4) { background-image: url('./images/highlands.jpg'); }
+    &:nth-child(5) { background-image: url('./images/campbeltown.jpg'); }
+    &:nth-child(6) { background-image: url('./images/world.jpg'); }
+    /* Category page grid */
+    &:nth-child(7) { background-image: url('./images/askaig.jpg'); }
+    &:nth-child(8) { background-image: url('./images/lagavulin.jpg'); }
+    &:nth-child(9) { background-image: url('./images/laphroaig.jpg'); }
+    &:nth-child(10) { background-image: url('./images/bruichladdich.jpg'); }
+    &:nth-child(11) { background-image: url('./images/caolila.jpg'); }
+    &:nth-child(12) { background-image: url('./images/kilchoman.jpg'); }
+  }
+}
+
+main > section {
+  margin-bottom: 2rem !important;
+
+  &:last-of-type {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Category page*/
+
+#islay-banner { background-image: url('./images/islay-banner.jpg'); }
+
+/* Detail page */
+
+.detail-page {
+  padding: 2rem 1rem;
+
+  @media (min-width: 1024px) {
+    padding: 3rem 4rem;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .whisky-description {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    line-height: 1.7;
+
+    h2 {
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+      border-left: 4px solid #e2c78c;
+      padding-left: 0.75rem;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    blockquote {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      background: #f3f3f3;
+      border-left: 5px solid #e2c78c;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #333;
+      border-radius: 6px;
+    }
+  }
+
+  .whisky-gallery {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  .whisky-video {
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+
+    iframe,
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+@import "./components/navbar.scss";
+@import "./components/footer.scss";
+
+
+
+
