@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".dropdown-toggle"),t=document.querySelector(".dropdown"),n=document.getElementById("navbarToggle"),o=document.getElementById("navbarMenu");e&&t&&(e.addEventListener("click",e=>{e.preventDefault(),t.classList.toggle("show")}),window.addEventListener("click",n=>{t.contains(n.target)||e.contains(n.target)||t.classList.remove("show")})),n&&o&&n.addEventListener("click",()=>{o.classList.toggle("is-collapsed")})});
+//# sourceMappingURL=my-whisky-app.417ff2f8.js.map

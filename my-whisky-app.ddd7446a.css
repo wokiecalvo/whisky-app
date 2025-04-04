@@ -1,0 +1,131 @@
+.navbar {
+  z-index: 1000;
+  background-color: #333;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar .navbar_content {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.navbar .navbar_left {
+  align-items: center;
+  gap: 1rem;
+  margin-right: auto;
+  display: flex;
+}
+
+.navbar .navbar_logo {
+  object-fit: contain;
+  width: auto;
+  max-height: 40px;
+}
+
+.navbar .navbar_toggle {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  display: none;
+}
+
+@media (width <= 768px) {
+  .navbar .navbar_toggle {
+    display: block;
+  }
+}
+
+.navbar .navbar_links {
+  flex-shrink: 0;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .navbar .navbar_links {
+    background-color: #333;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar .navbar_links.is-collapsed {
+    display: flex;
+  }
+}
+
+.navbar .navbar_links a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar li a {
+  color: #fff;
+  padding: .5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar li a:hover {
+  color: #bc922e;
+}
+
+.navbar li .dropdown-menu {
+  background: #444;
+  border-radius: 4px;
+  min-width: 150px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navbar li .dropdown-menu a {
+  padding: .5rem 1rem;
+}
+
+.navbar li .dropdown-menu a:hover {
+  background: #555;
+}
+
+@media (width <= 768px) {
+  .navbar li .dropdown-menu {
+    background: #222;
+    position: relative;
+  }
+}
+
+.navbar li.show .dropdown-menu {
+  display: block;
+}
+/*# sourceMappingURL=my-whisky-app.ddd7446a.css.map */
