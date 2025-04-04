@@ -160,11 +160,11 @@
       });
     }
   }
-})({"7wZbQ":[function(require,module,exports,__globalThis) {
+})({"5xVSB":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 63215;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -668,12 +668,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"2R06K":[function(require,module,exports,__globalThis) {
 var _navbarJs = require("./components/navbar.js");
-var _navbarScss = require("./components/navbar.scss");
 document.addEventListener('DOMContentLoaded', ()=>{
     (0, _navbarJs.setupNavbarDropdown)();
 });
 
-},{"./components/navbar.js":"aqW8l","./components/navbar.scss":"1JGYD"}],"aqW8l":[function(require,module,exports,__globalThis) {
+},{"./components/navbar.js":"aqW8l"}],"aqW8l":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setupNavbarDropdown", ()=>setupNavbarDropdown);
@@ -726,6 +725,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"1JGYD":[function() {},{}]},["7wZbQ","2R06K"], "2R06K", "parcelRequire8a64", {})
+},{}]},["5xVSB","2R06K"], "2R06K", "parcelRequire8a64", {})
 
 //# sourceMappingURL=my-whisky-app.0f77c784.js.map
