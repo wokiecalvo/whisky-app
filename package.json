@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "src/index.html",
-  "homepage": "https://wokiecalvo.github.io/my-whisky-app/",
+  "homepage": "https://wokiecalvo.github.io/whisky-app/",
   "scripts": {
     "dev": "parcel src/index.html src/detail.html src/detail1.html src/about.html src/category.html src/links.html",
     "start": "parcel src/index.html src/detail.html src/detail1.html src/about.html src/category.html src/links.html",
