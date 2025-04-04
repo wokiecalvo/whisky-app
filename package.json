@@ -4,15 +4,18 @@
   "version": "0.0.0",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "src/index.html",
+  "homepage": "https://wokiecalvo.github.io/my-whisky-app/",
   "scripts": {
     "dev": "parcel src/index.html src/detail.html src/detail1.html src/about.html src/category.html src/links.html",
     "start": "parcel src/index.html src/detail.html src/detail1.html src/about.html src/category.html src/links.html",
-    "build": "parcel build src/index.html src/detail.html src/detail1.html src/about.html src/category.html src/links.html"
+    "build": "parcel build src/index.html src/detail.html src/detail1.html src/about.html src/category.html src/links.html",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "@parcel/transformer-posthtml": "^2.14.4",
     "@parcel/transformer-sass": "^2.14.4",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "parcel": "latest",
     "postcss": "^8.5.3",
     "posthtml-include": "^2.0.1"
