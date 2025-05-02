@@ -70,9 +70,27 @@
 
       <!-- Image Gallery -->
       <section class="whisky-gallery">
-        <img src="./images/whisky1-1.jpg" alt="Distillery View"/>
-        <img src="./images/whisky1-2.jpg" alt="Tasting Scene" />
-        <img src="./images/whisky1-3.jpg" alt="Bottle Closeup"/>
+        <figure>
+          <picture>
+            <source srcset="./images/whisky1-1.jpg?as=avif&width=800" type="image/avif" media="(min-width: 768px)">
+            <source srcset="./images/whisky1-1-phone.jpg?as=webp&width=600" type="image/webp">
+            <img src="./images/whisky1-1-phone.jpg?width=400" alt="Distillery View" loading="lazy" class="clickable-image">
+          </picture>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="./images/whisky1-2.jpg?as=avif&width=800" type="image/avif" media="(min-width: 768px)">
+            <source srcset="./images/whisky1-2.jpg?as=webp&width=600" type="image/webp">
+            <img src="./images/whisky1-2.jpg?width=400" alt="Tasting Scene" loading="lazy" class="clickable-image">
+          </picture>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="./images/whisky1-3.jpg?as=avif&width=800" type="image/avif" media="(min-width: 768px)">
+            <source srcset="./images/whisky1-3.jpg?as=webp&width=600" type="image/webp">
+            <img src="./images/whisky1-3.jpg?width=400" alt="Bottle Closeup" loading="lazy" class="clickable-image">
+          </picture>
+        </figure>
       </section>
 
       <!-- Video -->

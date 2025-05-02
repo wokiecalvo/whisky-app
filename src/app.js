@@ -5,3 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const logo = document.querySelector('.navbar_logo');
+
+  logo.addEventListener('click', () => {
+    logo.classList.add('rotation');
+    setTimeout(() => {
+      logo.classList.remove('rotation');
+    }, 600);
+  });
+
