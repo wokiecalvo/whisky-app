@@ -13,43 +13,45 @@ body {
   display: block;
 }
 
-.banner-link {
-  color: #fff;
-  text-align: center;
+.banner-picture {
   cursor: pointer;
-  background-position: center;
-  background-size: cover;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 300px;
-  margin: 0;
-  padding: 0;
-  font-size: 2rem;
-  transition: filter .3s;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
-.banner-link.overlay-text {
-  text-align: center;
-  z-index: 1;
-  font-size: 2rem;
+.banner-picture picture, .banner-picture .banner-img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.banner-link:hover {
+.banner-picture .banner-img {
+  object-fit: cover;
+  transition: filter .3s;
+}
+
+.banner-picture:hover .banner-img {
   filter: brightness(.7);
 }
 
-.banner-link#finest {
-  background-image: url("finest.cbe44859.jpg");
+.banner-picture .overlay-text {
+  color: #fff;
+  text-shadow: 0 2px 4px #000000b3;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  inset: 0;
 }
 
-.banner-link#expertise {
-  background-image: url("expertise.8883df24.jpg");
-}
-
-.banner-link#join {
-  background-image: url("join.f856cd27.jpg");
+.banner-join .banner-img {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .categories-grid {
@@ -75,18 +77,18 @@ body {
 
 .categories-grid .category-card {
   cursor: pointer;
-  color: #fff;
-  text-align: center;
-  background-position: center;
-  background-size: cover;
   justify-content: center;
   align-items: center;
   height: 200px;
-  font-size: 1.5rem;
-  transition: filter .3s;
   display: flex;
   position: relative;
   overflow: hidden;
+}
+
+.categories-grid .category-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .categories-grid .category-card .overlay {
@@ -111,51 +113,51 @@ body {
 }
 
 .categories-grid .category-card:first-child {
-  background-image: url("islay.ce3d55bd.jpg");
+  background-image: url("islay.b114e8f9.jpeg");
 }
 
 .categories-grid .category-card:nth-child(2) {
-  background-image: url("lowlands.4637837e.jpg");
+  background-image: url("lowlands.41a08e55.jpeg");
 }
 
 .categories-grid .category-card:nth-child(3) {
-  background-image: url("speyside.96b5ef62.jpg");
+  background-image: url("speyside.c60609ea.jpeg");
 }
 
 .categories-grid .category-card:nth-child(4) {
-  background-image: url("highlands.b2673cee.jpg");
+  background-image: url("highlands.815d198f.jpeg");
 }
 
 .categories-grid .category-card:nth-child(5) {
-  background-image: url("campbeltown.bee768f4.jpg");
+  background-image: url("campbeltown.79f21b45.jpeg");
 }
 
 .categories-grid .category-card:nth-child(6) {
-  background-image: url("world.28e81cb9.jpg");
+  background-image: url("world.bcaf5aef.jpeg");
 }
 
 .categories-grid .category-card:nth-child(7) {
-  background-image: url("askaig.cc38193d.jpg");
+  background-image: url("askaig.f0ff12ec.jpeg");
 }
 
 .categories-grid .category-card:nth-child(8) {
-  background-image: url("lagavulin.a5d3d4e9.jpg");
+  background-image: url("lagavulin.2ffe8ddd.jpeg");
 }
 
 .categories-grid .category-card:nth-child(9) {
-  background-image: url("laphroaig.919e8058.jpg");
+  background-image: url("laphroaig.11ddbc06.jpeg");
 }
 
 .categories-grid .category-card:nth-child(10) {
-  background-image: url("bruichladdich.0806c22c.jpg");
+  background-image: url("bruichladdich.f8f86c8f.jpeg");
 }
 
 .categories-grid .category-card:nth-child(11) {
-  background-image: url("caolila.6b4d271b.jpg");
+  background-image: url("caolila.a6390920.jpeg");
 }
 
 .categories-grid .category-card:nth-child(12) {
-  background-image: url("kilchoman.51d2a62e.jpg");
+  background-image: url("kilchoman.da20772f.jpeg");
 }
 
 main > section {
@@ -167,7 +169,7 @@ main > section:last-of-type {
 }
 
 #islay-banner {
-  background-image: url("islay-banner.6e624d10.jpg");
+  background-image: url("islay-banner.92a26926.jpeg");
 }
 
 .detail-page {
@@ -293,8 +295,14 @@ main > section:last-of-type {
 
 .navbar .navbar_logo {
   object-fit: contain;
+  cursor: pointer;
   width: auto;
   max-height: 40px;
+  transition: transform .6s;
+}
+
+.navbar .navbar_logo.rotation {
+  transform: rotate(360deg);
 }
 
 .navbar .navbar_toggle {
