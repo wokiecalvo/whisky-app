@@ -2,6 +2,10 @@
   "plugins": {
     "posthtml-include": {
       "root": "./src"
+    },
+    "posthtml-lazyload": {
+      "attribute": "lazyload",
+      "loading": "lazy"
     }
   }
 }
