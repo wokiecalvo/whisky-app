@@ -19,7 +19,7 @@
         <picture>
           <source srcset="images/whisky2-feature.jpg?as=avif&width=960&quality=50" type="image/avif">
           <source srcset="images/whisky2-feature.jpg?as=webp&width=960&quality=50" type="image/webp">
-          <img src="./images/whisky2-feature.jpg?width=800&quality=50" alt="Whisky Name" />
+          <img src="./images/whisky2-feature.jpg?width=800&quality=50" alt="Whisky Name" width="800" height="533"/>
         </picture>
       </section>
 
@@ -104,15 +104,10 @@
       </section>
       <!-- Video -->
       <section class="whisky-video">
-        <iframe
-          width="100%"
-          height="400"
-          src="https://www.youtube.com/embed/frbsZ8TGsX8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <div class="youtube-placeholder" onclick="this.innerHTML = '<iframe width=100% height=400 src=https://www.youtube.com/embed/frbsZ8TGsX8?autoplay=1 frameborder=0 allowfullscreen></iframe>'">
+          <img src="https://img.youtube.com/vi/frbsZ8TGsX8/hqdefault.jpg" alt="Play video" width="800" height="450">
+          <button class="play-button">▶</button>
+        </div>
       </section>
 
     </main>
