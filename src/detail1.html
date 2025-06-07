@@ -15,7 +15,11 @@
     <main class="detail-page">
 
       <section class="featured-image">
-        <img src="./images/whisky2-feature.jpg" alt="Whisky Name" />
+        <picture>
+          <source srcset="images/whisky2-feature.jpg?as=avif&width=960&quality=50" type="image/avif">
+          <source srcset="images/whisky2-feature.jpg?as=webp&width=960&quality=50" type="image/webp">
+          <img src="./images/whisky2-feature.jpg?width=1600" alt="Whisky Name" />
+        </picture>
       </section>
 
       <header>
@@ -74,7 +78,29 @@
         <img src="./images/whisky2-2.jpg" alt="Tasting Scene" />
         <img src="./images/whisky2-3.jpg" alt="Bottle Closeup"/>
       </section>
-
+      <section class="whisky-gallery">
+        <figure>
+          <picture>
+            <source srcset="./images/whisky2-1.jpg?as=avif&width=800" type="image/avif" media="(min-width: 768px)">
+            <source srcset="./images/whisky2-1.jpg?as=webp&width=600" type="image/webp">
+            <img src="./images/whisky2-1.jpg?width=400" alt="Distillery View" loading="lazy" class="clickable-image">
+          </picture>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="./images/whisky2-2.jpg?as=avif&width=800" type="image/avif" media="(min-width: 768px)">
+            <source srcset="./images/whisky2-2.jpg?as=webp&width=600" type="image/webp">
+            <img src="./images/whisky2-2.jpg?width=400" alt="Tasting Scene" loading="lazy" class="clickable-image">
+          </picture>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="./images/whisky2-3.jpg?as=avif&width=800" type="image/avif" media="(min-width: 768px)">
+            <source srcset="./images/whisky2-3.jpg?as=webp&width=600" type="image/webp">
+            <img src="./images/whisky2-3.jpg?width=400" alt="Bottle Closeup" loading="lazy" class="clickable-image">
+          </picture>
+        </figure>
+      </section>
       <!-- Video -->
       <section class="whisky-video">
         <iframe

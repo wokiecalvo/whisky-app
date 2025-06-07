@@ -15,7 +15,12 @@
     <main class="detail-page">
 
       <section class="featured-image">
-        <img src="./images/whisky1-feature.jpg" alt="Whisky Name" />
+        <picture>
+          <source srcset="images/whisky1-feature.jpg?as=avif&width=960&quality=50" type="image/avif">
+          <source srcset="images/whisky1-feature.jpg?as=webp&width=960&quality=50" type="image/webp">
+          <img src="./images/whisky1-feature.jpg?width=1600" alt="Whisky Name" />
+        </picture>
+        
       </section>
 
       <header>
