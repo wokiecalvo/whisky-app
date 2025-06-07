@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ardbeg</title>
     <link rel="stylesheet" href="styles.scss" />
+    <link rel="preload" as="image" href="/whisky1-feature.jpeg?as=avif&width=800" type="image/avif">
     <script defer type="module" src="app.js"></script>
   </head>
   <body>
@@ -18,7 +19,7 @@
         <picture>
           <source srcset="images/whisky1-feature.jpg?as=avif&width=960&quality=50" type="image/avif">
           <source srcset="images/whisky1-feature.jpg?as=webp&width=960&quality=50" type="image/webp">
-          <img src="./images/whisky1-feature.jpg?width=1600" alt="Whisky Name" />
+          <img src="./images/whisky1-feature.jpg?width=800&quality=50" alt="Whisky Name" loading="eager" width="800" height="533"/>
         </picture>
         
       </section>
