@@ -101,15 +101,10 @@
 
       <!-- Video -->
       <section class="whisky-video">
-        <iframe
-          width="100%"
-          height="400"
-          src="https://www.youtube.com/embed/dLueDqixlE0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <div class="youtube-placeholder" onclick="this.innerHTML = '<iframe width=100% height=400 src=https://www.youtube.com/embed/dLueDqixlE0?autoplay=1 frameborder=0 allowfullscreen></iframe>'">
+          <img src="https://img.youtube.com/vi/dLueDqixlE0/hqdefault.jpg" alt="Play video" width="800" height="450">
+          <button class="play-button">▶</button>
+        </div>
       </section>
 
     </main>
